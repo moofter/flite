@@ -226,9 +226,12 @@ dnf update
 ```
 
 # AMD/NV
-If you have an AMD/NV graphics card it should be possible to boot and install but you'll manually have to setup drivers as usual. 
+If you have an AMD/NV graphics card it should be possible to boot and install but you'll manually have to setup drivers as usual.
+
 https://rpmfusion.org/Howto/Multimedia
+
 https://rpmfusion.org/Howto/NVIDIA
+
 https://fedoraproject.org/wiki/Firefox_Hardware_acceleration#Video_decoding
 
 ## Todo
