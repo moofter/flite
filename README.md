@@ -22,6 +22,7 @@ When not using custom partitioning Fedora defaults to using btrfs. This is my pr
 * [AMD/NV](#amdnv)
 * [Todo](#todo)
 
+## Features
 * Included packages:
   - GUI Stuff:
     - Gnome 44 on Wayland or Xorg
