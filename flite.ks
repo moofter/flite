@@ -1,4 +1,4 @@
-# lite.ks -- A minimal Fedora kickstarter
+# flite.ks -- A minimal Fedora kickstarter
 # Most options should speak for itself but I also added some comments here and there.
 # NOTE: This file must be flattened before use: ksflatten --config flite.ks -o flat.ks
 
@@ -51,7 +51,7 @@ touch /etc/machine-id
 sed -i 's/^livesys_session=.*/livesys_session="gnome"/' /etc/sysconfig/livesys
 %end
 
-# This block sets the default plymouth theme and rids us of the gnome-tour. Somehow removing it with "-gnome-tour" in the packages section doens't work.
+# This block sets the default plymouth theme and rids us of the gnome-tour. Somehow removing it with "-gnome-tour" in the packages section doesn't work.
 %post
 dnf remove -y gnome-tour
 plymouth-set-default-theme spinner -R
@@ -78,7 +78,7 @@ rpmfusion-nonfree-release
 
 #
 # Here's where you likely want to make your edits. Add more packages, remove some, add firmware and drivers.
-# For example if you have Intel grapics newer than 6th gen replace "libva-intel-driver" with "intel-media-driver".
+# For example if you have Intel grapics 6th gen or newer replace "libva-intel-driver" with "intel-media-driver".
 # Refer to the Fedora wiki to find out what kind of drivers and utils your hardware needs.
 # Once installed you can safely remove anaconda with "dnf remove anaconda\*" to tidy things up.
 # If you don't know what something is look it up using "dnf" or a search engine and see if you need or want it.
@@ -108,8 +108,9 @@ zsh-syntax-highlighting
 
 # Gnome stuff
 # If you want a bare bones Gnome install only install "gdm", "gnome-console" and "gnome-session-wayland-session" and remove the rest.
-# Maybe keep nautilus unless you want to install another file manager or are a machogist who uses terminal file mamnagers =]
+# Maybe keep nautilus unless you want to install another file manager or are a masochist who uses a terminal file manager =]
 # If you want to install Gnome extensions using a browser you must also keep the "gnome-browser-connector" package.
+# You could remove everything below and for example just add a core (or meta for all the bloat) xfce package or kde, or anythign else available in Fedora or rpmfusion repo's.
 baobab
 emoji-picker
 eog
