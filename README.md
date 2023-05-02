@@ -126,7 +126,7 @@ Sort apps alphabetically, run as your normal user account:
 ```
 gsettings set org.gnome.shell app-picker-layout "[]"
 ```
-If you need remove ssh access now is the time to enable it:
+If you need remote ssh access now is the time to enable it:
 ```
 sudo systemctl enable --now sshd
 ```
