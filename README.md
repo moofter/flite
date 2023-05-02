@@ -73,7 +73,7 @@ When not using custom partitioning Fedora defaults to using btrfs. This is my pr
     - libvacodecs
 
 # Installation
-Download the iso and install as usual or build your own customised version follow the instructions below. You will need a working Fedora or RHEL based system.
+Download the iso and install as usual or to build your own customised version follow the instructions below. You will need a working Fedora or RHEL based system.
 ```
 sudo setenforce 0
 sudo dnf install mock
@@ -85,13 +85,13 @@ mock -r fedora-38-x86_64 --init
 mock -r fedora-38-x86_64 --install lorax-lmc-novirt nano pykickstart wget
 mock -r fedora-38-x86_64 --shell --old-chroot --enable-network
 ```
-Now we're inside the mock environment. Time to build the iso. Use wget to grab the kickstart file form the repo or create a lite.ks file with nano and paste the contents of the kickstart file manually.
+Now we're inside the mock environment. Time to build the iso. Use wget to grab the kickstart file form the repo or create a flite.ks file with nano and paste the contents of the kickstart file manually.
 ```
 wget https://raw.githubusercontent.com/moofter/flite/main/flite.ks
 # edit the kickstart file to taste, it is safe to add/remove packages in the section I've added
-nano lite.ks
+nano flite.ks
 # flatten the kickstarter file
-ksflatten --config lite.ks -o flat.ks
+ksflatten --config flite.ks -o flat.ks
 ```
 Start the building process.
 ```
