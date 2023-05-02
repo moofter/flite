@@ -51,7 +51,7 @@ touch /etc/machine-id
 sed -i 's/^livesys_session=.*/livesys_session="gnome"/' /etc/sysconfig/livesys
 %end
 
-# This block sets the default plymouth theme and rids us of the gnome-tour. somehow removing it with "-gnome-tour" in the packages section doens't work.
+# This block sets the default plymouth theme and rids us of the gnome-tour. Somehow removing it with "-gnome-tour" in the packages section doens't work.
 %post
 dnf remove -y gnome-tour
 plymouth-set-default-theme spinner -R
@@ -146,7 +146,7 @@ libva-intel-driver
 libva-utils
 thermald
 
-# Totally optional, add plymouth + plain spinenr theme. If removed also remove the "plymouth-set-default-theme spinner -R" command above.
+# Totally optional, add plymouth + plain spinner theme. If you remove this also remove the "plymouth-set-default-theme spinner -R" command above.
 plymouth
 plymouth-theme-spinner
 
