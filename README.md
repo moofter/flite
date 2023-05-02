@@ -68,7 +68,7 @@ When not using custom partitioning Fedora defaults to using btrfs. This is my pr
     - zsh syntax highlight
   - Driver Stuff:
     - ffmpeg-free
-    - libva-intel-driver (supports up to 5th gen -- replace with ```intel-media-driver``` for 6th gen or newer)
+    - libva-intel-driver
     - libva-utils
     - libvacodecs
 
@@ -122,12 +122,10 @@ Remove some unused firmware packages (see ```dnf list installed | grep firmware`
 ```
 sudo dnf remove amd-gpu-firmware nvidia-gpu-firmware
 ```
-
 Sort apps alphabetically, run as your normal user account:
 ```
 gsettings set org.gnome.shell app-picker-layout "[]"
 ```
-
 If you need remove ssh access now is the time to enable it:
 ```
 sudo systemctl enable --now sshd
@@ -196,9 +194,7 @@ First make sure the ```acpid``` service is enabled and running:
 ```
 systemctl enable --now acpid
 ```
-
 Now reboot and test sleep. If it works, great! If not try disabling hiberation and hybrid sleep:
-
 ```
 sudo systemctl mask hibernate.target hybrid-sleep.target
 ```
@@ -226,7 +222,7 @@ dnf update
 ```
 
 # AMD/NV
-If you have an AMD/NV graphics card it should be possible to boot and install but you'll manually have to setup drivers as usual.
+If you have an AMD/NV graphics card it should be possible to boot and install but you'll manually have to setup drivers and such.
 
 https://rpmfusion.org/Howto/Multimedia
 
