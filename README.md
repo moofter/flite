@@ -118,19 +118,42 @@ Optionally if you just want to use ```dnf``` remove flatpak, flatseal and gnome-
 ```
 sudo dnf remove flatpak\* flatseal
 ```
-Remove some unused firmware packages (see ```dnf list installed | grep firmware```).
+Optionally remove some unused firmware packages (see ```dnf list installed | grep firmware```).
 ```
 sudo dnf remove amd-gpu-firmware nvidia-gpu-firmware
 ```
-Sort apps alphabetically, run as your normal user account:
+### Verify SELinux mode
+SELinux should be enabled by default and running in ```enforcing``` mode. You can get some information about the current SELinux status with the ```sudo sestatus``` command. If its enabled but not running in enforcement mode (```Current mode: permissive```) run the following commands to enable it, or disable in the section after it. 
+```
+# get current status, should be enabled but in permissive mode
+sudo sestatus
+# relabel files on next boot, this should fully enable selinux
+sudo fixfiles onboot
+# and reoobt
+reboot
+```
+After relabeling check the status again and if you see ```Current mode: enforcing``` then SELinux is fully functional now. Instead of ```sestatus``` you can also use ```getenforce``` to quikly see the enforcement mode.
+
+Disabling SELinux completely is not recommened by Fedora, who wants us to use permissive mode in ```/etc/selinux/config``` instead. But if you want to disable it then run ```sudo grubby --update-kernel ALL --args selinux=0``` then reboot and no SELinux stuff will be loaded or used at all.
+
+Important to note that SELinux may block things you wish to unblock. So every now and then or when something seems broken or not working properly check for any SELinux denials. As opart of troubleshooting you can also temporarly disable SELinux by using the grubby command above and when you want to turn it back on just run these commands:
+```
+sudo grubby --update-kernel ALL --remove-args selinux
+sudo fixfiles onboot
+sudo reboot
+```
+### Sorting apps
+To sort apps alphabetically, run as your normal user account:
 ```
 gsettings set org.gnome.shell app-picker-layout "[]"
 ```
+## Enable remote ssh access
 If you need remote ssh access now is the time to enable it:
 ```
 sudo systemctl enable --now sshd
 ```
-Secure boot can also be enabled now, if your machine supports it.
+### Enable Secure Boot
+Secure Boot can also be enabled in your bios now, if your machine supports it.
 
 ### ui tweaks
 Open the ```Extensions``` app and enable the 3 builtin extensions to get sleep prevention, a fixed dash and a bunch of extra options to configure the interface. You can configure each of them to your liking or simply disable or remove them (```dnf list installed | grep gnome-shell-extension```). there are many more extensions both in the Fedora repo and plenty more on the [Gnome extension website](https://extensions.gnome.org). To use the latter you need to install an add-on in Firefox. The site will prompt you for it. Of course this step is completely optional and the extensions can be removed if you don't need them.
