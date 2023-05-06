@@ -1,7 +1,7 @@
 # Flite
 A minimal Fedora workstation thingy.
 ![Flite](https://github.com/moofter/flite/blob/main/desktop.png?raw=true)
-Aim of this repo is to educate myself on creating custom fedora iso's to install offline locally on multiple machines and have all I need included on it. I like a minimal install but also have some quality of life stuff and easy to use utilities that Gnome provides.
+Aim of this repo is to educate myself on creating custom fedora iso's to install offline locally on multiple machines and have all I need included on it. I like a minimal install but also have some quality of life stuff and easy to use utilities that Gnome provides. After removing some left overs the installed system takes up about 1.9GB of disk space and has less than 1100 packages installed. This can be trimmed down further by removing fonts and locales and such.
 
 The iso avaiable for download was build using the ```flite.ks``` kickstart file. It includes [my selection](https://github.com/moofter/flite/blob/main/apps.png?raw=true) of packages and apps. You can use the iso as is or even better; build your own iso! I've provided instructions below.
 
