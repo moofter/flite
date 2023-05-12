@@ -98,7 +98,9 @@ exa
 htop
 igt-gpu-tools
 nano
+pciutils
 ripgrep
+usbutils
 wget
 
 # some zsh stuff, because it is the best shell, fight me
@@ -141,7 +143,9 @@ timeshift
 mpv
 
 # Drivers/misc
+#broadcom-wl
 ffmpeg-free
+#iwl7260-firmware
 libavcodec-freeworld
 libva-intel-driver
 libva-utils
