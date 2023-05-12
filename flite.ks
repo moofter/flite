@@ -114,6 +114,7 @@ zsh-syntax-highlighting
 baobab
 emoji-picker
 eog
+epiphany
 evince
 gdm
 gnome-browser-connector
@@ -136,7 +137,6 @@ nautilus
 
 # GUI stuff
 flatseal
-gparted
 timeshift
 mpv
 
