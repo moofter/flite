@@ -7,7 +7,7 @@ The iso avaiable for download was build using the ```flite.ks``` kickstart file.
 
 If you choose to use the iso keep in mind it only has Intel graphical drivers preinstalled for integrated graphics up to 5th gen as thats the main target for my usage. If you have 6th gen or newer simply install ```intel-media-driver``` and remove the ```libva-intel-driver``` and reboot.
 
-No browser is included but ```flatpack``` is installed and ```flatseal``` is available to manage installed flatpak permissions. Of course it is also possible to quickly install a browser like this; ```dnf -y install firefox``` ☺️
+A small Webkit based browser called Epiphany (```Web```) is included but ```flatpack``` is installed to add your favourite browser and ```flatseal``` is available to manage installed flatpak permissions. Of course it is also possible to quickly install a browser like this; ```dnf -y install firefox``` ☺️
 
 When not using custom partitioning Fedora defaults to using btrfs. This is my preferred option due to snapshots. If you don't want this setup partitions manually using the "custom" or "advanced custom" options in the installer. You can also use gparted to set things up and then assign mount points using the "custom" option in the installer.
 
