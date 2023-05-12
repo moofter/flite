@@ -35,7 +35,6 @@ When not using custom partitioning Fedora defaults to using btrfs. This is my pr
     - File Manager (nautilus)
     - Flatseal
     - Font Viewer
-    - Gparted
     - Image Viewer
     - Logs
     - Media Player (mpv)
