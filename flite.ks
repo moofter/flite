@@ -147,9 +147,12 @@ mpv
 ffmpeg-free
 #iwl7260-firmware
 libavcodec-freeworld
-libva-intel-driver
 libva-utils
 thermald
+
+# Intel graphics, use intel-media-driver for 6th gen and later
+libva-intel-driver
+#intel-media-driver
 
 # Totally optional, add plymouth + plain spinner theme. If you remove this also remove the "plymouth-set-default-theme spinner -R" command above.
 plymouth
