@@ -237,6 +237,12 @@ HandleLidSwitch=suspend
 ```
 Please note it is possible the power or other buttons are still mapped to try and hibernate instead of suspend. What happens when you press power (related) buttons is also defined in ```/etc/systemd/logind.conf```. Just search for the word hibernate in that file. A valid option is also ```ignore``` if you want nothing to happen when pressing that key.
 
+## sync/match login screen (gdm)
+If you've chanegd resolutioon or other screen settings and what them applied in the login screen as well execute the following command:
+```
+sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/
+```
+
 # Updating
 Easy mode!
 ```
