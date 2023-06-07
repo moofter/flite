@@ -209,6 +209,11 @@ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 Reboot!
 
 ## Sleep/wake issues on some Macs and maybe others
+You may want to disable sleep and suspending all together for server usage and such:
+```
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+```
+
 If your system doesn't wake up or wakes up only after 5-10 minutes there are several thigns to try and fix it.
 
 First make sure the ```acpid``` service is enabled and running:
