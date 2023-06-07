@@ -82,7 +82,6 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #export PF_INFO="ascii os host kernel uptime pkgs memory shell editor wm de palette"
 #[[ "$(cat /proc/$PPID/comm)" =~ "(kgx|foot|alacritty|sshd)" ]] && pfetch
 
-
 # enable syntax highlighting, needs to be loaded last
 #
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
