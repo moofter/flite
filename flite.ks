@@ -120,6 +120,7 @@ emoji-picker
 eog
 epiphany
 evince
+#file-roller
 gdm
 gnome-browser-connector
 gnome-console
