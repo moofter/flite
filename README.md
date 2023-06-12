@@ -20,6 +20,7 @@ When not using custom partitioning Fedora defaults to using btrfs. This is my pr
 * [Troubleshooting](#troubleshooting)
 * [Updating](#updating)
 * [AMD/NV](#amdnv)
+* [Firefox](#firefox)
 * [Todo](#todo)
 
 ## Features
@@ -261,7 +262,13 @@ https://rpmfusion.org/Howto/Multimedia
 
 https://rpmfusion.org/Howto/NVIDIA
 
+# Firefox
+
 https://fedoraproject.org/wiki/Firefox_Hardware_acceleration#Video_decoding
+
+https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin/
+
+https://addons.mozilla.org/en-US/firefox/addon/enhanced-h264ify
 
 ## Todo
 + This list will be populated when I sorted out my draft todo list
