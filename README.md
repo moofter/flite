@@ -214,11 +214,9 @@ You may want to disable sleep and suspending all together for server usage and s
 ```
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
-
 If your system doesn't wake up or wakes up only after 5-10 minutes there are several thigns to try and fix it.
 
 First make sure the ```acpid``` service is enabled and running:
-
 ```
 systemctl enable --now acpid
 ```
@@ -244,7 +242,7 @@ HandleLidSwitch=suspend
 Please note it is possible the power or other buttons are still mapped to try and hibernate instead of suspend. What happens when you press power (related) buttons is also defined in ```/etc/systemd/logind.conf```. Just search for the word hibernate in that file. A valid option is also ```ignore``` if you want nothing to happen when pressing that key.
 
 ## sync/match login screen (gdm)
-If you've chanegd resolutioon or other screen settings and what them applied in the login screen as well execute the following command:
+If you've changed resolution or other screen settings and what them applied in the login screen as well execute the following command:
 ```
 sudo cp ~/.config/monitors.xml /var/lib/gdm/.config/
 ```
@@ -266,7 +264,7 @@ https://rpmfusion.org/Howto/NVIDIA
 
 https://fedoraproject.org/wiki/Firefox_Hardware_acceleration#Video_decoding
 
-https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin/
+https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin
 
 https://addons.mozilla.org/en-US/firefox/addon/enhanced-h264ify
 
