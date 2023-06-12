@@ -101,6 +101,7 @@ igt-gpu-tools
 nano
 pciutils
 ripgrep
+unzip
 usbutils
 wget
 
