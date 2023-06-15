@@ -262,11 +262,16 @@ https://rpmfusion.org/Howto/NVIDIA
 
 # Firefox
 
-https://fedoraproject.org/wiki/Firefox_Hardware_acceleration#Video_decoding
+Enabling h/w accelerated video decoding all you need to do is set ```media.ffmpeg.vaapi.enabled``` and ```gfx.webrender.all``` to true in ```about:config``` and restart Firefox.
 
-https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin
+To test if it works play a video in Firefox while runing ```sudo intel_gpu_top``` and look closely at the ```Video``` usage. It will be low usage between 1-5% and CPU usage should also be reduced by a bit. My i5 powered NUC 8th gen can play Youtube 1080p using ~3% GPU and 5-15% CPU usage. You can also use this tool when playing back other video formats in ```mpv``` and the likes.
+
+For some older Intel graphics it may be needed to block unsupported codecs using this add-on:
 
 https://addons.mozilla.org/en-US/firefox/addon/enhanced-h264ify
 
+Don't forget to block those adds and trackers:
+
+https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin
 ## Todo
 + This list will be populated when I sorted out my draft todo list
