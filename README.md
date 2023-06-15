@@ -85,7 +85,7 @@ mock -r fedora-38-x86_64 --init
 mock -r fedora-38-x86_64 --install lorax-lmc-novirt nano pykickstart wget
 mock -r fedora-38-x86_64 --shell --old-chroot --enable-network
 ```
-Now we're inside the mock environment. Time to build the iso. Use wget to grab the kickstart file form the repo or create a flite.ks file with nano and paste the contents of the kickstart file manually.
+Now we're inside the mock environment. Time to build the iso. Use wget to grab the kickstart file from the repo or create a flite.ks file with nano and paste the contents of the kickstart file manually.
 ```
 wget https://raw.githubusercontent.com/moofter/flite/main/flite.ks
 # edit the kickstart file to taste, it is safe to add/remove packages in the section I've added
@@ -99,7 +99,7 @@ livemedia-creator --ks flat.ks --no-virt --resultdir /var/lmc --project Flite --
 ```
 Exit the mock environment and move the iso to the current directory.
 ```
-mv /var/lib/mock/fedora-38-x86_64/root/var/lmc/Flite-38-x86_64.iso .
+sudo mv /var/lib/mock/fedora-38-x86_64/root/var/lmc/Flite-38-x86_64.iso .
 ```
 Clean up whatever mess mock has made.
 ```
