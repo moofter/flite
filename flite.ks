@@ -1,4 +1,4 @@
-# flite.ks -- A minimal Fedora kickstarter
+# flite.ks -- A minimal Fedora kickstarter.
 # Most options should speak for itself but I also added some comments here and there.
 # NOTE: This file must be flattened before use: ksflatten --config flite.ks -o flat.ks
 
@@ -18,7 +18,7 @@ zerombr
 clearpart --all
 part / --fstype="ext4" --size=5120
 
-# Standard repo's
+# Standard repo's.
 repo --name="fedora" --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
 repo --name="updates" --mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$releasever&arch=$basearch
 repo --name="fedora-cisco-openh264" --mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-cisco-openh264-$releasever&arch=$basearch
@@ -86,7 +86,7 @@ rpmfusion-nonfree-release
 # If you need acpi to work "properly" then post-install "systemctl enable --now acpid" has to be run. I don't know why its not autostarted by default.
 #
 
-# acpi stuff
+# ACPI stuff
 acpi
 acpid
 acpitool
@@ -105,7 +105,7 @@ unzip
 usbutils
 wget
 
-# some zsh stuff, because it is the best shell, fight me
+# Some zsh stuff, because it is the best shell, fight me!
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
@@ -114,7 +114,8 @@ zsh-syntax-highlighting
 # If you want a bare bones Gnome install only install "gdm", "gnome-console" and "gnome-session-wayland-session" and remove the rest.
 # Maybe keep nautilus unless you want to install another file manager or are a masochist who uses a terminal file manager =]
 # If you want to install Gnome extensions using a browser you must also keep the "gnome-browser-connector" package.
-# You could remove everything below and for example just add a core (or meta for all the bloat) xfce package or kde, or anythign else available in Fedora or rpmfusion repo's.
+#
+# You could remove everything below and for example just add a core (or meta for all the bloat) xfce package or kde, or anything else available in Fedora or rpmfusion repo's.
 baobab
 emoji-picker
 eog
@@ -153,7 +154,7 @@ libavcodec-freeworld
 libva-utils
 thermald
 
-# Intel graphics, use intel-media-driver for 6th gen and later
+# Intel graphics, use intel-media-driver for 6th gen and later.
 libva-intel-driver
 #intel-media-driver
 
@@ -161,7 +162,7 @@ libva-intel-driver
 plymouth
 plymouth-theme-spinner
 
-# glibc lang packas, need to test if this can be removed or not
+# glibc lang packas, need to test if this can be removed or not.
 glibc-all-langpacks
 
 # Please leave the removals below this line in tact unless you really need something from it.
