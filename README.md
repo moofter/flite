@@ -21,6 +21,7 @@ When not using custom partitioning Fedora defaults to using btrfs. This is my pr
 * [Updating](#updating)
 * [AMD/NV](#amdnv)
 * [Firefox](#firefox)
+* [mpv](#mpv)
 * [Todo](#todo)
 
 ## Features
@@ -273,6 +274,12 @@ https://addons.mozilla.org/en-US/firefox/addon/enhanced-h264ify
 Don't forget to block those adds and trackers:
 
 https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin
+
+# mpv h/w decoding
+Somehow it doesn't work unless I make a config file for it. Use the ```vainfo``` command to find what codecs your graphics chip supports and the ```intel_gpu_top``` command to check if it works. There should be some activity in the ```Video``` section.
+```
+echo "hwdec=auto" > ~/.config/mpv/mpv.conf
+```
 
 ## Todo
 + ISO and auto post-install customisations; theme, dot files, shell, wallpaper, etc
