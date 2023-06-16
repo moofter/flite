@@ -278,7 +278,7 @@ https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin
 # mpv h/w decoding
 Somehow it doesn't work unless I make a config file for it. Use the ```vainfo``` command to find what codecs your graphics chip supports and the ```intel_gpu_top``` command to check if it works. There should be some activity in the ```Video``` section.
 ```
-mkdir ~/config/mpv
+mkdir ~/.config/mpv
 echo "hwdec=auto" > ~/.config/mpv/mpv.conf
 ```
 
