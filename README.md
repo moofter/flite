@@ -282,6 +282,15 @@ mkdir ~/.config/mpv
 echo "hwdec=auto" > ~/.config/mpv/mpv.conf
 ```
 
+## Resources
+https://docs.fedoraproject.org/
+
+https://pagure.io/fedora-kickstarts/tree/main
+
+https://apps.gnome.org/en-GB/#circle
+
+https://extensions.gnome.org/
+
 ## Todo
 + ISO and auto post-install customisations; theme, dot files, shell, wallpaper, etc
 + Change some Fedora defaults for dnf (kernel history, fastest mirror, multi downloads) and maybe others like grub
