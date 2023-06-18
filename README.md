@@ -271,6 +271,8 @@ For some older Intel graphics it may be needed to block unsupported codecs using
 
 https://addons.mozilla.org/en-US/firefox/addon/enhanced-h264ify
 
+For example, my NUC 8 does not support AV1 but does support VP8/9 and h264. Setting the add-on to only block AV1 makes sure videos are only being decoded by the gpu. To see which codes are supported run ```vainfo``` it will show all available decoding/encoding codecs.
+
 Don't forget to block those adds and trackers:
 
 https://addons.mozilla.org/en-GB/firefox/addon/ublock-origin
